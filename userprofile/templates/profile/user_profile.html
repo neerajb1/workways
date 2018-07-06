@@ -1,0 +1,24 @@
+
+{% if user.is_staff %}
+  {% for object in query_set %}
+    <li>
+    <td> "Name":{{object.name}}</td><br>
+    <td>"EmailID" :{{object.user.email}}<br>
+    <td>"Salary" :{{object.Salary}}<br>
+    <td> "EmpID":{{object.empid}}</td><br>
+    <td>"Mobile" :{{object.mobile}}<br>
+    <td>"DOB" :{{object.dob}}<br>
+    <hr>
+    </li>
+
+  {% endfor %}
+{%else%}
+  <li>
+  <td> "Name":{{query_set.name}}</td></br>
+  <td>"EmailID" :{{object.user.email}}<br>
+  <td>"Salary" :{{query_set.Salary}}</br>
+  <td> "EmpID":{{query_set.empid}}</td></br>
+  <td>"Mobile" :{{query_set.mobile}}</br>
+  </li>
+
+{%endif%}

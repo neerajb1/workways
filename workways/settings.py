@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account',
+    'userprofile',
 ]
 AUTH_USER_MODEL = 'account.User' #changes the built-in user model to ours
 LOGIN_URL = '/login/'

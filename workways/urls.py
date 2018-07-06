@@ -8,11 +8,13 @@ from django.views.generic import TemplateView, RedirectView
 
 
 from account.views import LoginView, RegisterView
-
+from userprofile.views import (
+    user_profile,
+    )
 
 
 urlpatterns = [
-
+    url(r'^$', user_profile, name='profile'),
     url(r'^accounts/$', RedirectView.as_view(url='/account')),
     # url(r'^account/', include("account.urls", namespace='account')),
     # url(r'^accounts/', include("account.passwords.urls")),
