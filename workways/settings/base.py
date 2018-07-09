@@ -67,6 +67,19 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'workways.urls'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'shuklaneeraj2014.2015@gmail.com' #my gmail username
+EMAIL_HOST_PASSWORD = 'neerajb143' #my gmail password
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "Neeraj <nk.shukla2k18@gmail.com>"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'shuklaneeraj2014.2015@gmail.com' #my gmail username
+EMAIL_HOST_PASSWORD = 'neerajb143' #my gmail password
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "Neeraj <nk.shukla2k18@gmail.com>"
+
 
 TEMPLATES = [
     {
@@ -143,7 +156,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-# 
+#
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, "static"),
 # )
