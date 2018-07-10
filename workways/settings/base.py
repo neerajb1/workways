@@ -31,7 +31,7 @@ SECRET_KEY = 'zu+kof=0^25!rey(j+w-^_y*n$50loe=%2u)y7+_!7*np%pne!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["workways.herokuapp.com"]
+ALLOWED_HOSTS = ["workways.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition

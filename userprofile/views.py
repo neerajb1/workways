@@ -6,7 +6,7 @@ from django.shortcuts import render
 from account.models import User
 from .models import Profile
 
-# @login_required
+@login_required
 def user_profile(request):
     if request.user.is_staff:
         qs = Profile.objects.all()
