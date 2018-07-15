@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ["workways.herokuapp.com" , "127.0.0.1"]
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'shuklaneeraj2014.2015@gmail.com' #my gmail username
-EMAIL_HOST_PASSWORD = 'neerajb143' #my gmail password
+EMAIL_HOST_PASSWORD = 'abcc' #my gmail password
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "Neeraj <nk.shukla2k18@gmail.com>"
