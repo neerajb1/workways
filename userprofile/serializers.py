@@ -13,9 +13,6 @@ User= get_user_model()
 
 class ProfileSerializer(serializers.HyperlinkedModelSerializer):
 	user = serializers.CharField(source='user.username', read_only=True)
-
-
-
 	class Meta:
 		model = Profile
 		fields = [
@@ -27,8 +24,16 @@ class ProfileSerializer(serializers.HyperlinkedModelSerializer):
             "empid",
 		]
 
+
+
+
 class ProfileViewSet(viewsets.ModelViewSet):
     authentication_classes = [ BasicAuthentication, ]
-    permission_classes = [IsAdminUser, IsAuthenticated,]
-    queryset = Profile.objects.all()
+    permission_classes = [ IsAuthenticated,]
+    # queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
+    def get_queryset(self):
+	    if self.request.user.is_staff:
+		    return Profile.objects.all()
+	    else:
+		    return Profile.objects.filter(user= self.request.user)

@@ -15,7 +15,7 @@ from userprofile.views import (
     user_profile,
     )
 router = routers.DefaultRouter()
-router.register(r"profiles", ProfileViewSet),
+router.register(r"profiles", ProfileViewSet, 'profile-api'),
 
 urlpatterns = [
     url(r'^$', user_profile, name='profile'),
